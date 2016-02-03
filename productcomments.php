@@ -793,7 +793,7 @@ class ProductComments extends Module
 			'allow_guests' => (int)Configuration::get('PRODUCT_COMMENTS_ALLOW_GUESTS'),
 			'productcomment_cover' => (int)Tools::getValue('id_product').'-'.(int)$image['id_image'], // retro compat
 			'productcomment_cover_image' => $cover_image,
-			'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
+			'mediumSize' => Image::getSize(ImageType::getFormattedName('medium')),
 			'criterions' => ProductCommentCriterion::getByProduct((int)Tools::getValue('id_product'), $this->context->language->id),
 			'action_url' => '',
 			'averageTotal' => round($average['grade']),
@@ -845,7 +845,7 @@ class ProductComments extends Module
 			'secure_key' => $this->secure_key,
 			'productcomment_cover' => (int)Tools::getValue('id_product').'-'.(int)$image['id_image'],
 			'productcomment_cover_image' => $cover_image,
-			'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
+			'mediumSize' => Image::getSize(ImageType::getFormattedName('medium')),
 			'nbComments' => (int)ProductComment::getCommentNumber((int)Tools::getValue('id_product')),
 			'productcomments_controller_url' => $this->context->link->getModuleLink('productcomments'),
 			'productcomments_url_rewriting_activated' => Configuration::get('PS_REWRITING_SETTINGS', 0),
